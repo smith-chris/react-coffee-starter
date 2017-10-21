@@ -1,10 +1,7 @@
 {
   "presets": [
-    ["env", {
-      "targets": {
-        "browsers": ["last 2 versions", "safari >= 7"]
-      }
-    }],
+    ["es2015", { "modules": false }],
     ["react"]
-  ]
+  ],
+  "plugins": ["react-hot-loader/babel"]
 }
