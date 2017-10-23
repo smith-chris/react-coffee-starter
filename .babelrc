@@ -3,5 +3,10 @@
     ["es2015", { "modules": false }],
     ["react"]
   ],
-  "plugins": ["react-hot-loader/babel"]
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"]
+    }],
+    "react-hot-loader/babel"
+  ]
 }
