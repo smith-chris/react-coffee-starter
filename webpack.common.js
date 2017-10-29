@@ -2,9 +2,15 @@ const path = require('path')
 
 module.exports = {
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve('./dist'),
     filename: 'bundle.js',
     publicPath: ''
+  },
+  resolve: {
+    modules: [
+      'node_modules',
+      path.resolve('./src')
+    ]
   },
   devtool: 'source-map',
   module: {
@@ -39,7 +45,7 @@ module.exports = {
             }
           }
         ],
-        include: path.join(__dirname, 'src')
+        include: path.resolve('./src')
       }
     ]
   }

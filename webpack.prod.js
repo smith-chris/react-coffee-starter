@@ -13,7 +13,7 @@ module.exports = merge(common, {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/index.html'),
+      template: path.resolve('./src/index.html'),
       inject: 'body'
     }),
     new UglifyJsPlugin({

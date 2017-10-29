@@ -15,13 +15,13 @@ module.exports = merge(common, {
   ],
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
+    contentBase: path.resolve('./dist'),
     historyApiFallback: true,
     hot: true
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/index.html'),
+      template: path.resolve('./src/index.html'),
       inject: 'body'
     }),
     new NamedModulesPlugin(),
