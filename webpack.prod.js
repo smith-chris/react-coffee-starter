@@ -4,6 +4,7 @@ const common = require('./webpack.common.js')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const {DefinePlugin} = require('webpack')
 const {UglifyJsPlugin} = require('webpack').optimize
 
 module.exports = merge(common, {
@@ -18,6 +19,11 @@ module.exports = merge(common, {
     new UglifyJsPlugin({
       sourceMap: true,
       comments: false
+    }),
+    new DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
     })
   ]
 })
