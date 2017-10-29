@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server"
   },
-  "author": "",
+  "author": "Krzysztof Kowalski",
   "license": "ISC",
   "dependencies": {
     "babel-plugin-module-resolver": "^2.7.1",
