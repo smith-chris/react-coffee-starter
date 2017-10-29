@@ -18,16 +18,16 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader'
-        }
+        use: ['babel-loader']
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        use: ['file-loader']
       },
       {
         test: /\.(scss|sass)$/,
         use: [
-          {
-            loader: 'style-loader'
-          },
+          'style-loader',
           {
             loader: 'css-loader',
             options: {
@@ -36,7 +36,6 @@ module.exports = {
               importLoaders: 1
             }
           },
-          'resolve-url-loader',
           {
             loader: 'sass-loader',
             options: {
