@@ -1,36 +1,12 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const {
-  NamedModulesPlugin,
-  HotModuleReplacementPlugin
-} = require('webpack')
 
 module.exports = {
-  entry: [
-    'react-hot-loader/patch',
-    './src/index.js'
-  ],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: ''
   },
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
-    historyApiFallback: true,
-    hot: true
-  },
-  plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/index.html'),
-      inject: 'body'
-    }),
-    new NamedModulesPlugin(),
-    new HotModuleReplacementPlugin()
-  ],
+  devtool: 'source-map',
   module: {
     rules: [
       {
