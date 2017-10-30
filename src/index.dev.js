@@ -4,13 +4,13 @@ import {AppContainer} from 'react-hot-loader'
 import App from './App'
 import store from 'store/store.dev'
 
-let rootElement = document.getElementById('app');
+let rootElement = document.getElementById('app')
 const render = Component => {
   ReactDOM.render(
     <AppContainer>
       <Component store={store}/>
     </AppContainer>,
-    rootElement,
+    rootElement
   )
 }
 

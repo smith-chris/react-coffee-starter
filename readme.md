@@ -3,7 +3,8 @@
  Unfancy React boilerplate project. Simple and good for beginners.
  
  [![deps](https://david-dm.org/smith-chris/react-starter.svg)](https://david-dm.org/smith-chris/react-starter)
-  
+ [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+ 
 ## What's inside
 
 - [webpack](https://webpack.js.org/) - for awesome workflow and to tide everything into one sweet js bundle file

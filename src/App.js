@@ -5,7 +5,7 @@ import 'styles/fix.css'
 import Routes from 'routes/routes'
 
 export default class App extends Component {
-  render() {
+  render () {
     return (
       <Provider store={this.props.store}>
         <Routes/>
