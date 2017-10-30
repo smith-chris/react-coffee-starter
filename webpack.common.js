@@ -43,6 +43,11 @@ module.exports = {
         }]
       },
       {
+        test: /\.(css)$/,
+        include: path.resolve('./src'),
+        use: ['style-loader', 'css-loader']
+      },
+      {
         test: /\.(scss|sass)$/,
         include: path.resolve('./src'),
         use: [
