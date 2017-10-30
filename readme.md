@@ -13,16 +13,24 @@
 
 ## How to use
 
-Clone the repo and install local dependencies:
+Clone the repo and install local dependencies run:
 ```sh
 npm i
 ```
 
-To develop:
+To develop run:
 ```sh
 npm start
 ```
 and open [localhost:8080](http://localhost:8080/)
+
+
+To build production package run:
+```sh
+npm run prod
+```
+
+and you will find compiled files in `/dist` directory
 
 ## Support
 
