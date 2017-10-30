@@ -10,6 +10,7 @@
 - [webpack](https://webpack.js.org/) - for awesome workflow and to tide everything into one sweet js bundle file
 - [babel](https://babeljs.io/) - for newest and greatest JS language features
 - [sass](http://sass-lang.com/) - so you would never hardcode variable in your styles
+- [autoprefixer](https://autoprefixer.github.io/) - for effortless vendor prefixing
 - [react](https://reactjs.org/) - because components are the way 
 - [redux](http://redux.js.org/) - for easy state management
 - and others smaller utils
