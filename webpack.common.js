@@ -1,4 +1,5 @@
 const path = require('path')
+const DirectoryNamedWebpackPlugin = require("directory-named-webpack-plugin")
 
 const isDev = process.argv.indexOf('-p') === -1
 
@@ -12,6 +13,12 @@ module.exports = {
     modules: [
       'node_modules',
       path.resolve('./src')
+    ],
+    plugins: [
+      new DirectoryNamedWebpackPlugin({
+        honorIndex: true,
+        include: path.resolve('./src')
+      })
     ]
   },
   devtool: 'source-map',
