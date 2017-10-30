@@ -1,8 +1,10 @@
 # React Starter
 
- Unfancy React boilerplate project. Simple and good for beginners
+ Unfancy React boilerplate project. Simple and good for beginners.
+ 
+ [![deps](https://david-dm.org/smith-chris/react-starter.svg)](https://david-dm.org/smith-chris/react-starter)
   
-## Whats inside
+## What's inside
 
 - [webpack](https://webpack.js.org/) - for awesome workflow and to tide everything into one sweet js bundle file
 - [babel](https://babeljs.io/) - for newest and greatest JS language features
@@ -30,12 +32,12 @@ To build production package run:
 npm run prod
 ```
 
-and you will find compiled files in `/dist` directory
+and you will find compiled files in `/dist` directory.
 
 ## Support
 
-Please open an issue for support.
+Please [open an issue](https://github.com/smith-chris/react-starter/issues/new) for support.
 
 ## Contributing
 
-Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and open a pull request.
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/smith-chris/react-starter/compare).
