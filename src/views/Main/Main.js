@@ -1,22 +1,25 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
+import styles from './Main.sass'
 
 import {
   incrementCounter,
   decrementCounter
 } from 'store/actions/counterActions'
+
 import Button from 'components/Button'
+import Header from 'components/Header'
 
 const Main = props => {
   const {counter, increment, decrement} = props
   return (
-    <div>
-      <h1>Main view</h1>
-      <p>{counter}</p>
-      <Link to='/second'>
+    <div className={styles.main}>
+      <Header>Main view</Header>
+      <Link to='/other'>
         <Button/>
       </Link>
+      <p>{counter}</p>
       <div>
         <Button
           text='decrement!'

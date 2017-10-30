@@ -95,3 +95,7 @@ button {
     border: 0;
     padding: 0;
 }
+/* Custom */
+* {
+    outline: none;
+}
