@@ -2,6 +2,7 @@ const path = require('path')
 const DirectoryNamedWebpackPlugin = require("directory-named-webpack-plugin")
 
 const isDev = process.argv.indexOf('-p') === -1
+let removeNull = array => array.filter(e => e !== null)
 
 module.exports = {
   output: {
@@ -50,7 +51,7 @@ module.exports = {
       {
         test: /\.(scss|sass)$/,
         include: path.resolve('./src'),
-        use: [
+        use: removeNull([
           'style-loader',
           {
             loader: 'css-loader',
@@ -60,14 +61,15 @@ module.exports = {
               importLoaders: 1
             }
           },
+          isDev ? null : 'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
               includePaths: [path.resolve('./src/styles')],
-              sourceMap: true
+              sourceMap: isDev
             }
           }
-        ]
+        ])
       }
     ]
   }
