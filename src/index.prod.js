@@ -5,7 +5,4 @@ import store from 'store/store.prod'
 
 let rootElement = document.getElementById('app')
 
-ReactDOM.render(
-  <App store={store}/>,
-  rootElement
-)
+ReactDOM.render(<App store={store}/>, rootElement)

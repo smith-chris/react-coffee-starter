@@ -21,26 +21,20 @@ const Main = props => {
       </Link>
       <p>{counter}</p>
       <div>
-        <Button
-          text='decrement!'
-          onClick={decrement}
-        />
-        <Button
-          text='increment!'
-          onClick={increment}
-        />
+        <Button text='decrement!' onClick={decrement}/>
+        <Button text='increment!' onClick={increment}/>
       </div>
     </div>
   )
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     counter: state.counter
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     increment: () => dispatch(incrementCounter()),
     decrement: () => dispatch(decrementCounter())

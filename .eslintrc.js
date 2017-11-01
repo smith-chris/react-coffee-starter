@@ -1,8 +1,6 @@
-const OFF = 0
-const WARN = 1
-const ERROR = 2
-
 module.exports = {
+  // Some of this options is just for Webstorm to pick up
+  // and prettier-standard works fine without those
   'extends': 'standard',
 
   'env': {
@@ -22,12 +20,17 @@ module.exports = {
   },
 
   'rules': {
-    'react/jsx-uses-react': ERROR,
-    'react/jsx-uses-vars': ERROR,
+    'object-curly-spacing': ['error', 'never'],
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error',
+    'react/jsx-tag-spacing': ['error', {
+      'closingSlash': 'never',
+      'beforeSelfClosing': 'never',
+      'afterOpening': 'never'
+    }],
     'brace-style': [
       'error',
-      'stroustrup',
-      { 'allowSingleLine': true }
+      'stroustrup'
     ]
   }
 }
