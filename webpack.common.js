@@ -1,5 +1,5 @@
 const path = require('path')
-const DirectoryNamedWebpackPlugin = require("directory-named-webpack-plugin")
+const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
 
 const isDev = process.argv.indexOf('-p') === -1
 let removeNull = array => array.filter(e => e !== null)
@@ -11,10 +11,12 @@ module.exports = {
     publicPath: ''
   },
   resolve: {
-    modules: [
-      'node_modules',
-      path.resolve('./src')
+    extensions: [
+      '.js',
+      '.json',
+      isDev ? '.dev.js' : '.prod.js'
     ],
+    modules: ['node_modules', path.resolve('./src')],
     plugins: [
       new DirectoryNamedWebpackPlugin({
         honorIndex: true,
@@ -33,15 +35,19 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
         include: path.resolve('./src/assets'),
-        use: [{
-          loader: 'file-loader',
-          options: isDev ? {
-            // use full path in development for better readability
-            name: '[path][name].[ext]'
-          } : {
-            outputPath: 'assets/'
+        use: [
+          {
+            loader: 'file-loader',
+            options: isDev
+              ? {
+                // use full path in development for better readability
+                name: '[path][name].[ext]'
+              }
+              : {
+                outputPath: 'assets/'
+              }
           }
-        }]
+        ]
       },
       {
         test: /\.(css)$/,
