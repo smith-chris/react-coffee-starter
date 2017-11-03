@@ -32,5 +32,21 @@ module.exports = {
       'error',
       'stroustrup'
     ]
-  }
+  },
+
+  'globals': [
+    'describe',
+    'before',
+    'beforeEach',
+    'after',
+    'afterEach',
+    'it',
+    'expect'
+  ].reduce(
+    (res, key) => {
+      res[key] = true
+      return res
+    },
+    {}
+  )
 }
