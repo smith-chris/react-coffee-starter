@@ -11,9 +11,11 @@ module.exports = {
   },
   resolve: {
     extensions: [
+      '.coffee',
       '.js',
       '.json',
-      isDev ? '.dev.js' : '.prod.js'
+      isDev ? '.dev.coffee' : '.prod.coffee',
+      isDev ? '.dev.js' : '.prod.js',
     ],
     modules: ['node_modules', path.resolve('./src')]
   },
@@ -24,6 +26,31 @@ module.exports = {
         test: /\.js$/,
         include: path.resolve('./src'),
         use: ['babel-loader']
+      },
+      {
+        test: /\.coffee$/,
+        include: path.resolve('./src'),
+        use: [
+          {
+            loader: 'coffee-loader',
+            options: {
+              transpile: {
+                presets: [
+                  ['es2015', {modules: false}],
+                  ['react']
+                ],
+                plugins: ['react-hot-loader/babel'],
+                env: {
+                  test: {
+                    plugins:
+                      'transform-es2015-modules-commonjs',
+                    presets: ['react']
+                  }
+                }
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/,

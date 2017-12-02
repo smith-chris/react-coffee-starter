@@ -17,7 +17,7 @@ const Main = props => {
     <div className={styles.main}>
       <Header>Main view</Header>
       <Link to='/other'>
-        <Button/>
+        <Button>Hello</Button>
       </Link>
       <p>{counter}</p>
       <div>

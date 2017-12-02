@@ -1,13 +1,10 @@
 import React from 'react'
 import styles from './Button.sass'
 
-let Button = props => {
-  const {onClick, text} = props
+export default Button = (props) ->
+  {onClick, text} = props
   return (
     <button onClick={onClick} className={styles.button}>
       {text || 'Hello world!'}
     </button>
   )
-}
-
-export default Button
