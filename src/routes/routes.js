@@ -5,8 +5,8 @@ import {
   Switch
 } from 'react-router-dom'
 
-import Main from 'views/Main'
-import Other from 'views/Other'
+import Main from 'views/Main/Main'
+import Other from 'views/Other/Other'
 
 const Routes = () => {
   return (

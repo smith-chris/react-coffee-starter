@@ -10,7 +10,7 @@ const {
 
 module.exports = merge(common, {
   entry: ['react-hot-loader/patch', './src/index.dev.js'],
-  devtool: 'inline-source-map',
+  devtool: 'eval',
   devServer: {
     contentBase: path.resolve('./dist'),
     historyApiFallback: true,

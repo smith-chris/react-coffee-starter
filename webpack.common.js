@@ -1,5 +1,4 @@
 const path = require('path')
-const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
 
 const isDev = process.argv.indexOf('-p') === -1
 let removeNull = array => array.filter(e => e !== null)
@@ -16,13 +15,7 @@ module.exports = {
       '.json',
       isDev ? '.dev.js' : '.prod.js'
     ],
-    modules: ['node_modules', path.resolve('./src')],
-    plugins: [
-      new DirectoryNamedWebpackPlugin({
-        honorIndex: true,
-        include: path.resolve('./src')
-      })
-    ]
+    modules: ['node_modules', path.resolve('./src')]
   },
   devtool: 'source-map',
   module: {

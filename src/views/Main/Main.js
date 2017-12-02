@@ -8,8 +8,8 @@ import {
   decrementCounter
 } from 'store/actions/counterActions'
 
-import Button from 'components/Button'
-import Header from 'components/Header'
+import Button from 'components/Button/Button'
+import Header from 'components/Header/Header'
 
 const Main = props => {
   const {counter, increment, decrement} = props
