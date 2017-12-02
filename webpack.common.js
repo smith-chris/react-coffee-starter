@@ -30,27 +30,7 @@ module.exports = {
       {
         test: /\.coffee$/,
         include: path.resolve('./src'),
-        use: [
-          {
-            loader: 'coffee-loader',
-            options: {
-              transpile: {
-                presets: [
-                  ['es2015', {modules: false}],
-                  ['react']
-                ],
-                plugins: ['react-hot-loader/babel'],
-                env: {
-                  test: {
-                    plugins:
-                      'transform-es2015-modules-commonjs',
-                    presets: ['react']
-                  }
-                }
-              }
-            }
-          }
-        ]
+        use: ['babel-loader', 'coffee-loader']
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
