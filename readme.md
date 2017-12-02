@@ -1,4 +1,4 @@
-# React Starter
+# React Coffee Starter
 
  Unfancy React boilerplate project. Simple and good for beginners.
  
@@ -8,7 +8,8 @@
 ## What's inside
 
 - [webpack](https://webpack.js.org/) - for awesome workflow and to tide everything into one sweet js bundle file
-- [babel](https://babeljs.io/) - for newest and greatest JS language features
+- [coffeescript](http://coffeescript.org/) - for writing effortless indent style javascript
+- [babel](https://babeljs.io/) - to translate coffeescript output into es5
 - [sass](http://sass-lang.com/) - so you would never hardcode variable in your styles
 - [autoprefixer](https://autoprefixer.github.io/) - for effortless vendor prefixing
 - [react](https://reactjs.org/) - because components are the way 
