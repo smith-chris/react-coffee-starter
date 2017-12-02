@@ -11,13 +11,13 @@ import {
 import Button from 'components/Button/Button'
 import Header from 'components/Header/Header'
 
-const Main = props => {
-  const {counter, increment, decrement} = props
+Main = (props) ->
+  {counter, increment, decrement} = props
   return (
     <div className={styles.main}>
       <Header>Main view</Header>
       <Link to='/other'>
-        <Button>Hello</Button>
+        <Button/>
       </Link>
       <p>{counter}</p>
       <div>
@@ -26,20 +26,13 @@ const Main = props => {
       </div>
     </div>
   )
-}
 
-const mapStateToProps = state => {
-  return {
-    counter: state.counter
-  }
-}
+mapStateToProps = (state) ->
+  counter: state.counter
 
-const mapDispatchToProps = dispatch => {
-  return {
-    increment: () => dispatch(incrementCounter()),
-    decrement: () => dispatch(decrementCounter())
-  }
-}
+mapDispatchToProps = (dispatch) ->
+  increment: () => dispatch(incrementCounter()),
+  decrement: () => dispatch(decrementCounter())
 
 export default connect(
   mapStateToProps,

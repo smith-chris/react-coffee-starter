@@ -8,7 +8,7 @@ const {DefinePlugin} = require('webpack')
 const {UglifyJsPlugin} = require('webpack').optimize
 
 module.exports = merge(common, {
-  entry: './src/index.prod.js',
+  entry: './src/index.prod.coffee',
   devtool: 'nosources-source-map',
   plugins: [
     new CleanWebpackPlugin(['dist']),

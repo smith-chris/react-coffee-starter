@@ -9,7 +9,7 @@ const {
 } = require('webpack')
 
 module.exports = merge(common, {
-  entry: ['react-hot-loader/patch', './src/index.dev.js'],
+  entry: ['react-hot-loader/patch', './src/index.dev.coffee'],
   devtool: 'eval',
   devServer: {
     contentBase: path.resolve('./dist'),
