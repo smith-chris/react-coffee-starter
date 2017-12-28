@@ -9,6 +9,6 @@ export default Other = ->
   <div className={styles.other}>
     <Header>Other view</Header>
     <Link to='/'>
-      <Button/>
+      <Button text='Go to main view'/>
     </Link>
   </div>

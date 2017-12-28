@@ -17,7 +17,7 @@ Main = (props) ->
     <div className={styles.main}>
       <Header>Main view</Header>
       <Link to='/other'>
-        <Button/>
+        <Button text='Go to other view'/>
       </Link>
       <p>{counter}</p>
       <div>
