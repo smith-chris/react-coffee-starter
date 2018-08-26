@@ -1,13 +1,13 @@
 # React Coffee Starter
 
- Unfancy React boilerplate project. Simple and good for beginners.
+Unfancy React boilerplate project. Simple and good for beginners.
 
- [![deps](https://david-dm.org/smith-chris/react-coffee-starter.svg)](https://david-dm.org/smith-chris/react-coffee-starter)
+[![deps](https://david-dm.org/smith-chris/react-coffee-starter.svg)](https://david-dm.org/smith-chris/react-coffee-starter)
 
 ## What's inside
 
 - [webpack](https://webpack.js.org/) - for awesome workflow and to tide everything into one sweet js bundle file
-- [coffeescript](http://coffeescript.org/) - for writing effortless indent style javascript
+- [coffeescript with JSX support!](http://coffeescript.org/) - for writing effortless indent style javascript
 - [babel](https://babeljs.io/) - to translate coffeescript output into es5
 - [sass](http://sass-lang.com/) - so you would never hardcode variable in your styles
 - [autoprefixer](https://autoprefixer.github.io/) - for effortless vendor prefixing
@@ -18,18 +18,21 @@
 ## How to use
 
 Clone the repo and install local dependencies run:
+
 ```sh
 npm i
 ```
 
 To develop run:
+
 ```sh
 npm start
 ```
+
 and open [localhost:8080](http://localhost:8080/)
 
-
 To build production package run:
+
 ```sh
 npm run prod
 ```
